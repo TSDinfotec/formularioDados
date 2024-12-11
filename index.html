@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-B">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Completo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formulário de Cadastro/Aluno GFTeam</h1>
+
+    <!--Criando formulário-->
+    <!--action: para onde os dados são enviados-->
+    <!--method: como o formulario será enviando-->
+    <form action="/registro" method="POST">
+        <!--inputs: entradas-->
+        <label for="">Nome:</label>
+        <input type="text" name="nome" placeholder="Digite seu nome"/>
+
+        <label for="">Graduação:</label>
+        <input type="text" name="nome" placeholder="Digite sua graduação"/>
+
+        <label for="">Telefone:</label>
+        <input type="number" name="telefone" placeholder="Digite seu telefone"/>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" required placeholder="Digite seu primeiro email"/>
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" placeholder="Digite a sua senha"/>
+
+        <!--Textos mais longos - textarea-->
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" placeholder="Comente sobre sua graduação e academia"></textarea>
+
+        <!--Formas de seleção-->
+        <!--Selecionar algo, quero esgotar todas as minhas opções, mas escolher apenas uma-->
+        <h2>Preferências</h2>
+        <p>Gênero:</p>
+
+        <input type="radio" name="genero" value="Masculino"/>
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" value="Feminino"/>
+        <label for="feminino">Feminino</label>
+        <input type="radio" name="genero" value="Outro"/>
+        <label for="outro">Outro</label>
+
+        <!--requisitos semelhante podendo selecionar mais de uma opção-->
+        <p>Interesses:</p>
+        <input type="checkbox" name="interesses" value="Treinamento"/>
+        <label for="treinamento">Treinamento</label>
+        <input type="checkbox" name="interesses" value="Competição"/>
+        <label for="competição">Competição</label>
+        <input type="checkbox" name="interesses" value="Aulas"/>
+        <label for="aulas">Aulas</label>
+
+        <!--quero esconder as opções e limitar a uma escolha-->
+        <label for="turno">Turno</label>
+        <select name="turno">
+            <option value="">Selecione seu turno de treinamento</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+        </select>
+
+        <!--tipos HTML5-->
+        <label for="data_nascimento">Data de Nascimento</label>
+        <input type="date" name="data_nascimento"/>
+
+        <label for="hora_contato">Selecione o horário</label>
+        <input type="time" name="hora_contato"/>
+
+        <label for="cor">Selecione a cor:</label>
+        <input type="color" name="cor"/>
+
+        <!--Envio de arquivos-->
+        <div>
+            <input type="file" name="arquivo" accept=".pdf, .png">
+        </div>
+
+        <div>
+            <input type="file" name="arquivo" accept=".pdf, .png" multiple>
+        </div>
+        
+        <!--botão de ação: submit-->
+        <!--input type="submit" value="Enviar"/>-->
+        <div>
+            <button type="submit"Enviar>Enviar</button>
+            <button type="reset"Enviar>Limpar Formulário</button>
+        </div>
+        
+    </form>
+</body>
+</html>
